@@ -203,3 +203,23 @@ toastr.options = {
             })
       });      
     </script>
+
+
+
+<!-- كود JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let dropdownButton = document.getElementById("dropdown-button");
+        let dropdownMenu = document.getElementById("dropdown-menu");
+
+        dropdownButton.addEventListener("click", function () {
+            dropdownMenu.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add("hidden");
+            }
+        });
+    });
+</script>
