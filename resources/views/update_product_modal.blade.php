@@ -7,7 +7,7 @@
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="updateModalLabel">Update Product</h5>
+        <h5 class="modal-title" id="updateModalLabel">{{__('update_product.update_product')}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -15,20 +15,20 @@
 
             </div>
         <div class="form-group">
-            <label for="name">Product Name</label>
+            <label for="name">{{__("update_product.Name")}}</label>
             <input type="text" class="form-control" name="up_name" id="up_name" placeholder="Product Name">
         </div>
 
         
         <div class="form-group mt-2">
-            <label for="name">Product Price</label>
+            <label for="name">{{__("update_product.Price")}}</label>
             <input type="text" class="form-control" name="up_price" id="up_price" placeholder="Product Price">
         </div>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" id="update_product" class="btn btn-primary">Update Product</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__("update_product.Close")}}</button>
+        <button type="button" id="update_product" class="btn btn-primary">{{__("update_product.update")}}</button>
       </div>
     </div>
   </div>

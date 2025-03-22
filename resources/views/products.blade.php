@@ -17,17 +17,39 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <h2 class="my-5 text-center">Laravel Ajax Crud</h2>
-               <a href="" class="my-3 btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add Product</a>
+              <div class="relative inline-block text-left">
+                <!-- زر القائمة -->
+                <button id="dropdown-button" class="px-4 py-2 bg-gray-200 rounded-md">
+                    {{ strtoupper(app()->getLocale()) }}
+                </button>
+            
+                <!-- قائمة اللغات -->
+                <div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg border border-gray-300">
+                    <a href="{{ route('localization', 'en') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                        {{ __('English') }}
+                    </a>
+                    <a href="{{ route('localization', 'ar') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                        {{ __('العربية') }}
+                    </a>
+                </div>
+            </div>
+            
+
+
+
+
+
+                <h2 class="my-5 text-center">{{__('products.Head')}}</h2>
+               <a href="" class="my-3 btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">{{__('products.AddButton')}}</a>
                 <input type="text" name="search" id="search" class="form-control mb-3" placeholder="Search">
                <div class="table-data">
                 <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Price</th>
-      <th scope="col">Action</th>
+      <th scope="col">{{__('products.Name')}}</th>
+      <th scope="col">{{__('products.Price')}}</th>
+      <th scope="col">{{__('products.Action')}}</th>
     </tr>
   </thead>
   <tbody>
@@ -64,5 +86,6 @@
       @include('update_product_modal')
       @include('product_js') 
       {!! Toastr::message() !!} 
+   
   </body>
 </html>
